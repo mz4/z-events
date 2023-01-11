@@ -6,7 +6,10 @@ import MeetupList from '../components/meetups/MeetupList';
 interface IndexProps {
   meetups: {
     title: string;
-  };
+    address: string;
+    image: string;
+    id: string;
+  }[];
 }
 
 const Index: React.FC<IndexProps> = (props) => {
@@ -15,8 +18,7 @@ const Index: React.FC<IndexProps> = (props) => {
     <Fragment>
       <div>Test</div>
       <div>Testabc</div>
-      <div>{meetups.title}</div>
-      <MeetupList />
+      <MeetupList meetups={meetups} />
     </Fragment>
   );
 };
