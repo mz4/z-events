@@ -2,3 +2,4 @@ admin
 GJbTcd31APW1YI7o
 
 mongodb+srv://<username>:<password>@cluster0.5ng0lcy.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://admin:GJbTcd31APW1YI7o@cluster0.5ng0lcy.mongodb.net/?retryWrites=true&w=majority
