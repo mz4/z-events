@@ -9,6 +9,9 @@ interface IndexProps {
     address: string;
     image: string;
     id: string;
+    description: string;
+    date: string;
+    time: string;
   }[];
 }
 
@@ -16,15 +19,13 @@ const Index: React.FC<IndexProps> = (props) => {
   const { meetups } = props;
   return (
     <Fragment>
-      <div>Test</div>
-      <div>Testabc</div>
+      <div className="text-5xl font-bold text-red-700">Events list</div>
       <MeetupList meetups={meetups} />
     </Fragment>
   );
 };
 
 export async function getStaticProps() {
-  // fetch data from an API
   const client = await MongoClient.connect(
     'mongodb+srv://admin:GJbTcd31APW1YI7o@cluster0.5ng0lcy.mongodb.net/meetups?retryWrites=true&w=majority'
   );
@@ -43,6 +44,9 @@ export async function getStaticProps() {
         address: meetup.address,
         image: meetup.image,
         id: meetup._id.toString(),
+        description: meetup.description,
+        date: meetup.date,
+        time: meetup.time,
       })),
     },
     revalidate: 1,

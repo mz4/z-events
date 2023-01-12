@@ -3,7 +3,7 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontSize: {
-      xs: '0.75rem',
+      xs: '0.2rem',
       sm: '0.875rem',
       base: '1rem',
       lg: '1.125rem',
@@ -41,5 +41,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('@tailwindcss/line-clamp')],
 };
