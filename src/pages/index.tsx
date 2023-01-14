@@ -30,13 +30,9 @@ export async function getStaticProps() {
     'mongodb+srv://admin:GJbTcd31APW1YI7o@cluster0.5ng0lcy.mongodb.net/meetups?retryWrites=true&w=majority'
   );
   const db = client.db();
-
   const meetupsCollection = db.collection('meetups');
-
   const meetups = await meetupsCollection.find().toArray();
-
   client.close();
-
   return {
     props: {
       meetups: meetups.map((meetup) => ({

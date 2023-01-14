@@ -1,11 +1,12 @@
 {
   "editor.tabSize": 2,
-  "editor.detectIndentation": false,
+  "editor.fontSize": 16,
+  "editor.detectIndentation": true,
   "search.exclude": {
     "package-lock.json": true
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
     "source.fixAll.eslint"
